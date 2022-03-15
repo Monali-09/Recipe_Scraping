@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -69,13 +68,10 @@ public class MainCourse
 
 			String recipeSteps = recipePageObj.getRecipeSteps();
 			
-
-
 			String imageLink =recipePageObj.getImageLink() ;
 			
 			String nutriotionVal =recipePageObj.getNutritionValues();
 			
-
 			String recipeLink= recipePageObj.getRecipeLink();
 			
 
@@ -87,11 +83,12 @@ public class MainCourse
 			xlUtils.setCellData("Sheet8", i, 5, imageLink);
 			xlUtils.setCellData("Sheet8", i, 6, recipeLink);
 
+			
 			driver.navigate().back();
 
 		}
-		driver.close();   
-
-	}
+		driver.close();  
+		
+  }
 }
 
